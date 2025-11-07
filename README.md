@@ -1,4 +1,4 @@
-# 🎓 AIOS: The AI-Driven College Ecosystem
+# AIOS: The AI-Driven College Ecosystem
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--11--07-blue)
 [![Status](https://img.shields.io/badge/Status-In%20Development-yellow)](https://github.com/MeghVyas3132/AIOS)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -6,7 +6,7 @@
 
 > Revolutionizing higher education through comprehensive AI integration and intelligent automation
 
-## 📑 Table of Contents
+## Table of Contents
 - [Overview](#-overview)
 - [Core Components](#-core-components)
 - [Detailed Features](#-detailed-features)
@@ -17,7 +17,7 @@
 - [Contributing](#-contributing)
 - [License & Support](#-license--support)
 
-## 📚 Overview
+## Overview
 
 AIOS (AI-Driven Operating System) represents a paradigm shift in educational technology, offering a comprehensive ecosystem that transforms traditional college campuses into intelligent, responsive learning environments. By leveraging artificial intelligence, IoT integration, and data analytics, AIOS creates a seamless, personalized experience for all stakeholders while optimizing resource utilization and administrative efficiency.
 
@@ -34,7 +34,7 @@ To create an intelligent educational ecosystem that enhances learning outcomes, 
 
 ## 🔧 Core Components
 
-### 1. 🧠 AI Command Center
+### 1. AI Command Center
 
 #### Central Intelligence Hub
 - **Real-time Analytics Dashboard**
@@ -64,7 +64,7 @@ To create an intelligent educational ecosystem that enhances learning outcomes, 
   - Audit logging
   - GDPR/FERPA compliance
 
-### 2. 🤖 Smart Campus Interface
+### 2. Smart Campus Interface
 
 #### Interactive Kiosks
 - **Hardware Specifications**
@@ -96,7 +96,7 @@ To create an intelligent educational ecosystem that enhances learning outcomes, 
   - Resource requests
   - Communication tools
 
-### 3. 📋 Intelligent Learning Management
+### 3. Intelligent Learning Management
 
 #### Smart Attendance System
 - **Multi-Modal Authentication**
@@ -128,7 +128,7 @@ To create an intelligent educational ecosystem that enhances learning outcomes, 
   - Feedback generation
   - Question bank management
 
-## 🔍 Detailed Features
+## Detailed Features
 
 ### 1. Campus Automation
 
