@@ -30,8 +30,8 @@ This Technical Requirements Document defines the complete technical specificatio
 ## 2. High-Level Architecture Diagram
 
 ```
-┌──────────────────────────────────────────────────────────────────┐
-│                      PRESENTATION TIER                           │
+┌─────────────────────────────────────────────────────────────────┐
+│                      PRESENTATION TIER                          │
 │  ┌────────────┐  ┌────────────┐  ┌────────────┐  ┌────────────┐ │
 │  │  Student   │  │  Faculty   │  │   Admin    │  │   Voice    │ │
 │  │  Portal    │  │  Portal    │  │   Panel    │  │ Interface  │ │
@@ -44,8 +44,8 @@ This Technical Requirements Document defines the complete technical specificatio
 │    SSL Termination • Rate Limiting • JWT Validation • Routing    │
 └────────────────────────────────┬─────────────────────────────────┘
                                  ▼
-┌──────────────────────────────────────────────────────────────────┐
-│                     APPLICATION TIER                             │
+┌─────────────────────────────────────────────────────────────────┐
+│                     APPLICATION TIER                            │
 │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐            │
 │  │   Auth   │ │ Schedule │ │   Test   │ │Placement │            │
 │  │ Service  │ │ Service  │ │ Service  │ │ Service  │            │
@@ -54,10 +54,10 @@ This Technical Requirements Document defines the complete technical specificatio
 │  │  Cert    │ │  Notif   │ │  Career  │ │  Voice   │            │
 │  │ Service  │ │ Service  │ │ Training │ │Assistant │            │
 │  └──────────┘ └──────────┘ └──────────┘ └──────────┘            │
-└────────────────────────────────┬─────────────────────────────────┘
+└────────────────────────────────┬────────────────────────────────┘
                                  ▼
-┌──────────────────────────────────────────────────────────────────┐
-│                        AI/ML TIER                                │
+┌─────────────────────────────────────────────────────────────────┐
+│                        AI/ML TIER                               │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐              │
 │  │ ASR Engine  │  │ LLM Service │  │RAG Pipeline │              │
 │  │  (Whisper)  │  │(Llama/Mistr)│  │ (Qdrant)    │              │
@@ -66,10 +66,10 @@ This Technical Requirements Document defines the complete technical specificatio
 │  │  Scoring    │  │ OCR Service │  │Model Manager│              │
 │  │  Engine     │  │  (DocTR)    │  │   (vLLM)    │              │
 │  └─────────────┘  └─────────────┘  └─────────────┘              │
-└────────────────────────────────┬─────────────────────────────────┘
+└────────────────────────────────┬────────────────────────────────┘
                                  ▼
-┌──────────────────────────────────────────────────────────────────┐
-│                        DATA TIER                                 │
+┌─────────────────────────────────────────────────────────────────┐
+│                        DATA TIER                                │
 │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐            │
 │  │PostgreSQL│ │ MongoDB  │ │  Redis   │ │Vector DB │            │
 │  │(Relation)│ │(Document)│ │ (Cache)  │ │ (Qdrant) │            │
@@ -78,7 +78,7 @@ This Technical Requirements Document defines the complete technical specificatio
 │  │   Object Storage       │  │   Search Engine        │         │
 │  │   (MinIO/S3)           │  │   (Elasticsearch)      │         │
 │  └────────────────────────┘  └────────────────────────┘         │
-└──────────────────────────────────────────────────────────────────┘
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---

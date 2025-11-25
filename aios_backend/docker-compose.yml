@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: aios-postgres
+    environment:
+      POSTGRES_USER: aios_user
+      POSTGRES_PASSWORD: aios_password
+      POSTGRES_DB: aios_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aios_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - aios-network
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aios-backend
+    environment:
+      DATABASE_URL: postgresql://aios_user:aios_password@postgres:5432/aios_db
+      JWT_SECRET: your-secret-key-change-in-production
+      SQL_ECHO: "False"
+      ALLOWED_ORIGINS: "http://localhost,http://localhost:3000,http://localhost:8000,http://127.0.0.1,http://127.0.0.1:3000"
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - .:/app
+    networks:
+      - aios-network
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+volumes:
+  postgres_data:
+
+networks:
+  aios-network:
+    driver: bridge
